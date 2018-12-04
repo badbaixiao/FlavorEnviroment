@@ -1,5 +1,14 @@
 apply plugin: 'java-library'
+apply plugin: 'com.novoda.bintray-release'
 
+publish{
+    userOrg = user_org
+    groupId = group_id
+    artifactId = artifactId_base
+    publishVersion = publishVersion_base
+    desc = ''
+    website = web_site
+}
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
     api 'com.squareup:javapoet:1.9.0'

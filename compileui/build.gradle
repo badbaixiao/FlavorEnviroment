@@ -1,5 +1,13 @@
 apply plugin: 'com.android.library'
-
+apply plugin: 'com.novoda.bintray-release'
+publish {
+    userOrg = user_org
+    groupId = group_id
+    artifactId = artifactId_environment_switcher
+    publishVersion = publishVersion_environment_switcher
+    desc = ''
+    website = web_site
+}
 android {
     compileSdkVersion 28
 

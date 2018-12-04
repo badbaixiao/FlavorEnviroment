@@ -1,0 +1,6 @@
+gradlew clean build bintrayUpload -PbintrayUser=badbaixiao -PbintrayKey=94376b3b03481a93da3272d45fc59ee31463777d -PdryRun=false
+gradlew clean build bintrayUpload -PbintrayUser=BINTRAY_USERNAME -PbintrayKey=BINTRAY_KEY -PdryRun=false
+
+gradlew clean build bintrayUpload -PbintrayUser=badbaixiao -PbintrayKey=94376b3b03481a93da3272d45fc59ee31463777d -PdryRun=false
+
+gradlew clean generatePomFileForReleasePublication build bintrayUpload -PbintrayUser=badbaixiao -PbintrayKey=94376b3b03481a93da3272d45fc59ee31463777d -PdryRun=fals
