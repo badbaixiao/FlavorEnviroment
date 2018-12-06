@@ -26,19 +26,20 @@ task clean(type: Delete) {
 }
 
 ext{
-    artifactId_base = 'compile_base'
-    artifactId_compiler = 'compile'
-    artifactId_compiler_release = 'compile_prod'
-    artifactId_environment_switcher = 'compileui'
+    artifactId_base = 'soda_compile_base'
+    artifactId_compiler = 'soda_compile'
+    artifactId_compiler_release = 'soda_compile_prod'
+    artifactId_environment_switcher = 'soda_compileui'
 
-    publishVersion_base = '1.0'
-    publishVersion_compiler = '1.0'
-    publishVersion_compiler_release = '1.0'
-    publishVersion_environment_switcher = '1.0'
+    publishVersion_base = '1.0.1'
+    publishVersion_compiler = '1.0.1'
+    publishVersion_compiler_release = '1.0.1'
+    publishVersion_environment_switcher = '1.0.1'
 
-    user_org = "xiaobai"
-    user_emial = "badbaixiao@users.noreply.github.com"
+    user_org = "sodaxiaobai"
+    user_emial = "badbaixiao@gmail.com"
     group_id = "com.xiaobai.compile"
     web_site = "https://github.com/badbaixiao/FlavorEnviroment"
     gitUrl = "https://github.com/badbaixiao/FlavorEnviroment.git"
 }
+//gradlew clean build bintrayUpload -PbintrayUser=feitianxing -PbintrayKey=e165c84d48b16ec58ce364840d9f40f803c60af1 -PdryRun=false

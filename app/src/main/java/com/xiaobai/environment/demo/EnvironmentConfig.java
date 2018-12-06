@@ -13,7 +13,7 @@ public class EnvironmentConfig {
     private class App {
         @Environment(url = "https://gank.io/api/", alias = "正式",flavor = "product",defaultFlavor = BuildConfig.FLAVOR,isRelease = true)
         private String online;
-        @Environment(url = "https://gank.io/api/", alias = "正式",flavor = "stage",defaultFlavor = BuildConfig.FLAVOR)
+        @Environment(url = "https://gank.io/api/", alias = "测试",flavor = "stage",defaultFlavor = BuildConfig.FLAVOR)
         private String test;
     }
 

@@ -2,13 +2,7 @@ package com.xiaobai.compile.bean;
 
 import java.io.Serializable;
 
-/**
- * 每个被 {@link com.xiaobai.compile.annotation.Environment} 标记的属性，在编译时都会在
- * EnvironmentSwitcher.java 文件中生成与之一一对应的 {@link EnvironmentBean}。
- * <p>
- * Each attribute marked by {@link com.xiaobai.compile.annotation.Environment}
- * will generate a one-to-one correspondence with {@link EnvironmentBean} in the  EnvironmentSwitcher.java file at compile time.
- */
+
 public class EnvironmentBean implements Serializable {
     private String name;
     private String alias;
