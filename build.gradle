@@ -42,4 +42,3 @@ ext{
     web_site = "https://github.com/badbaixiao/FlavorEnviroment"
     gitUrl = "https://github.com/badbaixiao/FlavorEnviroment.git"
 }
-//gradlew clean build bintrayUpload -PbintrayUser=feitianxing -PbintrayKey=e165c84d48b16ec58ce364840d9f40f803c60af1 -PdryRun=false
