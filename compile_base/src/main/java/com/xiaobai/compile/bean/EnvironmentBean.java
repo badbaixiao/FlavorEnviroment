@@ -15,16 +15,17 @@ public class EnvironmentBean implements Serializable {
     public EnvironmentBean() {
     }
 
-    public EnvironmentBean(String name, String url, String alias, ModuleBean module) {
-        this(name, url, alias, module, false);
+    public EnvironmentBean(String name, String url, String alias,String flavor, ModuleBean module) {
+        this(name, url, alias, flavor,module, false);
     }
 
-    public EnvironmentBean(String name, String url, String alias, ModuleBean module, boolean checked) {
+    public EnvironmentBean(String name, String url, String alias, String flavor,ModuleBean module, boolean checked) {
         this.name = name;
         this.url = url;
         this.alias = alias;
         this.module = module;
         this.checked = checked;
+        this.flavor = flavor;
     }
 
     public String getName() {

@@ -15,6 +15,8 @@ public class EnvironmentConfig {
         private String online;
         @Environment(url = "https://gank.io/api/", alias = "测试",flavor = "stage",defaultFlavor = BuildConfig.FLAVOR)
         private String test;
+        @Environment(url = "https://gank.io/api/", alias = "开发",flavor = "develop",defaultFlavor = BuildConfig.FLAVOR)
+        private String develop;
     }
 
     /**
@@ -27,6 +29,9 @@ public class EnvironmentConfig {
 
         @Environment(url = "http://test.codexiaomai.top/api/", alias = "测试",flavor = "stage",defaultFlavor = BuildConfig.FLAVOR)
         private String test;
+
+        @Environment(url = "https://gank.io/api/", alias = "开发",flavor = "develop",defaultFlavor = BuildConfig.FLAVOR)
+        private String develop;
     }
 
     /**
@@ -40,6 +45,9 @@ public class EnvironmentConfig {
         @Environment(url = "http://news/test/", alias = "测试",flavor = "stage",defaultFlavor = BuildConfig.FLAVOR)
         private String test;
 
+        @Environment(url = "https://gank.io/api/", alias = "开发",flavor = "develop",defaultFlavor = BuildConfig.FLAVOR)
+        private String develop;
+
     }
 
     /**
@@ -52,5 +60,8 @@ public class EnvironmentConfig {
 
         @Environment(url = "http://test.share.com", alias = "测试",flavor = "stage",defaultFlavor = BuildConfig.FLAVOR)
         private String test;
+
+        @Environment(url = "https://gank.io/api/", alias = "开发",flavor = "develop",defaultFlavor = BuildConfig.FLAVOR)
+        private String develop;
     }
 }

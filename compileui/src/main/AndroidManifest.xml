@@ -4,6 +4,7 @@
     <application>
         <activity
             android:name=".EnvironmentSwitchActivity"
-            android:theme="@android:style/Theme.Light.NoTitleBar" />
+            android:theme="@android:style/Theme.Light.NoTitleBar"
+            android:launchMode="singleTask"/>
     </application>
 </manifest>

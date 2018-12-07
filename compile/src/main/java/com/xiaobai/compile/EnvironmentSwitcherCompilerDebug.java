@@ -228,9 +228,10 @@ public class EnvironmentSwitcherCompilerDebug extends AbstractProcessor {
                 String environmentUpperCaseName = environmentName.toUpperCase();
                 String url = environmentAnnotation.url();
                 String alias = environmentAnnotation.alias();
+                String flavor = environmentAnnotation.flavor();
 
                 FieldSpec environmentField = generateEnvironmentField(environmentAnnotation, defaultXXEnvironmentFiledBuilder,
-                        moduleUpperCaseName, environmentName, environmentUpperCaseName, url, alias);
+                        moduleUpperCaseName, environmentName, environmentUpperCaseName, url, alias,flavor);
 
                 environmentSwitcherClassBuilder.addField(environmentField);
 
@@ -263,7 +264,8 @@ public class EnvironmentSwitcherCompilerDebug extends AbstractProcessor {
                                                  String environmentName,
                                                  String environmentUpperCaseName,
                                                  String url,
-                                                 String alias) {
+                                                 String alias,
+                                                 String flavor) {
 //        if (environmentAnnotation.isRelease()) {
 //            defaultXXEnvironmentFiledBuilder.initializer(String.format("%s_%s%s", moduleUpperCaseName, environmentUpperCaseName, VAR_DEFAULT_ENVIRONMENT_SUFFIX));
 //        }
@@ -277,8 +279,8 @@ public class EnvironmentSwitcherCompilerDebug extends AbstractProcessor {
                 .builder(EnvironmentBean.class,
                         String.format("%s_%s%s", moduleUpperCaseName, environmentUpperCaseName, VAR_DEFAULT_ENVIRONMENT_SUFFIX),
                         Modifier.PUBLIC, Modifier.STATIC, Modifier.FINAL)
-                .initializer(String.format("new %s(\"%s\", \"%s\", \"%s\", %s%s)",
-                        EnvironmentBean.class.getSimpleName(), environmentName, url, alias, VAR_MODULE_PREFIX, moduleUpperCaseName))
+                .initializer(String.format("new %s(\"%s\", \"%s\", \"%s\", \"%s\",%s%s)",
+                        EnvironmentBean.class.getSimpleName(), environmentName, url, alias, flavor,VAR_MODULE_PREFIX, moduleUpperCaseName))
                 .build();
     }
 
